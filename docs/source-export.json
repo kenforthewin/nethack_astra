@@ -1,0 +1,194 @@
+[
+  {
+    "file": "EVIDENCE.md",
+    "original_sha256": "e0ce85a7feb7a79406578d48d89690fe7b247f10ddff58072b11bbc59e22fc18",
+    "exported_sha256": "e0ce85a7feb7a79406578d48d89690fe7b247f10ddff58072b11bbc59e22fc18",
+    "transformed": false
+  },
+  {
+    "file": "config/known_hosts",
+    "original_sha256": "602a15c32427e975f4155641559bfa186000a533edd936f1b82eb0d0879b8586",
+    "exported_sha256": "602a15c32427e975f4155641559bfa186000a533edd936f1b82eb0d0879b8586",
+    "transformed": false
+  },
+  {
+    "file": "config/nethackrc",
+    "original_sha256": "198f9c8b0e869941fb2f235dbf11f1c2514287ba9476ed9e569bbaa3801020bf",
+    "exported_sha256": "198f9c8b0e869941fb2f235dbf11f1c2514287ba9476ed9e569bbaa3801020bf",
+    "transformed": false
+  },
+  {
+    "file": "config/tmux.conf",
+    "original_sha256": "b262408088351f7fc79d600fee4af8bf2547956c7ce920164b0379975314e2b9",
+    "exported_sha256": "b262408088351f7fc79d600fee4af8bf2547956c7ce920164b0379975314e2b9",
+    "transformed": false
+  },
+  {
+    "file": "memory/live-run.md",
+    "original_sha256": "fc2b773bf344c79946a34bd8d3ab691d501a43ab4cb6d8e1ef9e93cbd34a6dad",
+    "exported_sha256": "fc2b773bf344c79946a34bd8d3ab691d501a43ab4cb6d8e1ef9e93cbd34a6dad",
+    "transformed": false
+  },
+  {
+    "file": "memory/run-2-emergency.json",
+    "original_sha256": "db015e46d2cc10f2bccb28bf91afc8f51e4e29c8316480bda81e950c7a882ec3",
+    "exported_sha256": "db015e46d2cc10f2bccb28bf91afc8f51e4e29c8316480bda81e950c7a882ec3",
+    "transformed": false
+  },
+  {
+    "file": "memory/run-2.md",
+    "original_sha256": "0754decb23a094dfd9ca84e1a41084569169f5bbac2ef8d3b430f93af30b0e20",
+    "exported_sha256": "0754decb23a094dfd9ca84e1a41084569169f5bbac2ef8d3b430f93af30b0e20",
+    "transformed": false
+  },
+  {
+    "file": "memory/run-3-emergency.json",
+    "original_sha256": "4a6569d6e87181cfe24897b123cd65c7a7a302fd83798989daa993931d744d8e",
+    "exported_sha256": "4a6569d6e87181cfe24897b123cd65c7a7a302fd83798989daa993931d744d8e",
+    "transformed": false
+  },
+  {
+    "file": "memory/run-3.md",
+    "original_sha256": "ff2d0a567d89069b280797f0fa6adb65f3cd3b1f421786cfda653d0ff15f3282",
+    "exported_sha256": "ff2d0a567d89069b280797f0fa6adb65f3cd3b1f421786cfda653d0ff15f3282",
+    "transformed": false
+  },
+  {
+    "file": "memory/session.md",
+    "original_sha256": "da527810d6304b941dd36ab4bdef351e4a4e53b9f9669a2e2577c54c8ff9e3ca",
+    "exported_sha256": "7879140a5d29ecbf81aa37513712b91a5e2cfac0e40f9a8d77f9f4768ead80e4",
+    "transformed": true
+  },
+  {
+    "file": ".gitignore",
+    "original_sha256": "449313bbe8b9645e3d11b162d1172b5bc77a999e17da0c93f2e71e08b8107029",
+    "exported_sha256": "449313bbe8b9645e3d11b162d1172b5bc77a999e17da0c93f2e71e08b8107029",
+    "transformed": false
+  },
+  {
+    "file": "README.md",
+    "original_sha256": "9fc7fbd1822e7b2d88e9f19952fdf61a67254e8d4a9e29157ae959dc04bfde5f",
+    "exported_sha256": "9fc7fbd1822e7b2d88e9f19952fdf61a67254e8d4a9e29157ae959dc04bfde5f",
+    "transformed": false
+  },
+  {
+    "file": "docs/METHODOLOGY.md",
+    "original_sha256": "78369b7841a9db1df527e942681f080e1b9c0d3e79bcfd3b9347721391ea4cdc",
+    "exported_sha256": "78369b7841a9db1df527e942681f080e1b9c0d3e79bcfd3b9347721391ea4cdc",
+    "transformed": false
+  },
+  {
+    "file": "docs/PUBLICATION.md",
+    "original_sha256": "bd541dd6134859915dd2c617cd36c9837e63930afb9ca51b7d09380f7426606b",
+    "exported_sha256": "bd541dd6134859915dd2c617cd36c9837e63930afb9ca51b7d09380f7426606b",
+    "transformed": false
+  },
+  {
+    "file": "docs/SETUP.md",
+    "original_sha256": "5470c2750a26a442dedaa6da4b35d05ebd51bf9ec36389993b74bed3c51f43b2",
+    "exported_sha256": "5470c2750a26a442dedaa6da4b35d05ebd51bf9ec36389993b74bed3c51f43b2",
+    "transformed": false
+  },
+  {
+    "file": "scripts/audit.py",
+    "original_sha256": "37c882a3fc8a555849ff198b6fad852bc9d69d8e65d74671ed07f86ae528b1e5",
+    "exported_sha256": "37c882a3fc8a555849ff198b6fad852bc9d69d8e65d74671ed07f86ae528b1e5",
+    "transformed": false
+  },
+  {
+    "file": "scripts/guard.py",
+    "original_sha256": "5adafe7ca8c3ee4997cc6b21b10867f9f73c5499c8da61f112e96d1316d538fd",
+    "exported_sha256": "5adafe7ca8c3ee4997cc6b21b10867f9f73c5499c8da61f112e96d1316d538fd",
+    "transformed": false
+  },
+  {
+    "file": "scripts/obs.mjs",
+    "original_sha256": "1e7ac75386ee9268fa3b8109ecc52e290a2178571302878f9ce8ae89394d60e4",
+    "exported_sha256": "1e7ac75386ee9268fa3b8109ecc52e290a2178571302878f9ce8ae89394d60e4",
+    "transformed": false
+  },
+  {
+    "file": "scripts/prepare_publication.py",
+    "original_sha256": "e2ad2327572eb74131ee1073a2ed549ae0121b34c6ecfbe41f98ac2ae04eed8a",
+    "exported_sha256": "e2ad2327572eb74131ee1073a2ed549ae0121b34c6ecfbe41f98ac2ae04eed8a",
+    "transformed": false
+  },
+  {
+    "file": "scripts/route.py",
+    "original_sha256": "cfa185e6125eb23c5b30975470df3ad6c623112ed917be290ce6d4cd4455172b",
+    "exported_sha256": "cfa185e6125eb23c5b30975470df3ad6c623112ed917be290ce6d4cd4455172b",
+    "transformed": false
+  },
+  {
+    "file": "scripts/session.py",
+    "original_sha256": "92254bd6ec7eab113c7334827b418637fe3a209ee8b7c6abfb4c75a91ba2c843",
+    "exported_sha256": "92254bd6ec7eab113c7334827b418637fe3a209ee8b7c6abfb4c75a91ba2c843",
+    "transformed": false
+  },
+  {
+    "file": "scripts/sokoban.py",
+    "original_sha256": "0ba7a8c691590f79e54ab0aa153f82b9a403c7b423036c60c47ae5d61455065c",
+    "exported_sha256": "0ba7a8c691590f79e54ab0aa153f82b9a403c7b423036c60c47ae5d61455065c",
+    "transformed": false
+  },
+  {
+    "file": "scripts/terminal.py",
+    "original_sha256": "23c22ebdf38d21282a7766045ca72b4e73eaf699a5c654bbe03ca820e4cf412d",
+    "exported_sha256": "23c22ebdf38d21282a7766045ca72b4e73eaf699a5c654bbe03ca820e4cf412d",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_audit.py",
+    "original_sha256": "f122f4ffc74fa74f3ffde27fe9f25e8e6803963336dc29926b38e11d540a58ee",
+    "exported_sha256": "f122f4ffc74fa74f3ffde27fe9f25e8e6803963336dc29926b38e11d540a58ee",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_guard.py",
+    "original_sha256": "5a04558a5cc0ec1998ea523106ea5b45ed4ee81b4dc648f22e601362c27e61d4",
+    "exported_sha256": "5a04558a5cc0ec1998ea523106ea5b45ed4ee81b4dc648f22e601362c27e61d4",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_publication.py",
+    "original_sha256": "8068af574cf10944d66fbca67f941f89388d8cb017e140d7958c1622bae768a8",
+    "exported_sha256": "8068af574cf10944d66fbca67f941f89388d8cb017e140d7958c1622bae768a8",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_session.py",
+    "original_sha256": "91098bdd7c1cc1d27982e9c75a54a911c929206c069c78f3e8b272b5511b3a72",
+    "exported_sha256": "91098bdd7c1cc1d27982e9c75a54a911c929206c069c78f3e8b272b5511b3a72",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_sokoban.py",
+    "original_sha256": "a204e79501442d643416fde0a25963404884f1ed2c8ac781143a70802858486c",
+    "exported_sha256": "a204e79501442d643416fde0a25963404884f1ed2c8ac781143a70802858486c",
+    "transformed": false
+  },
+  {
+    "file": "scripts/test_terminal.py",
+    "original_sha256": "a3a0c358918b66f41b9c281d494ac4a908cecb4923966870344c5f5a6191d997",
+    "exported_sha256": "a3a0c358918b66f41b9c281d494ac4a908cecb4923966870344c5f5a6191d997",
+    "transformed": false
+  },
+  {
+    "file": "scripts/verify_publication.py",
+    "original_sha256": "806ef4677578ce440d7efecc6b7e1ade1907c1ac78405615c79ff4cc25fdcc4c",
+    "exported_sha256": "806ef4677578ce440d7efecc6b7e1ade1907c1ac78405615c79ff4cc25fdcc4c",
+    "transformed": false
+  },
+  {
+    "file": "web/game.html",
+    "original_sha256": "2929ff523c72b670b4baea91de0caeb506412c3b6b4f9a52a2d5f3f7a0d6a886",
+    "exported_sha256": "2929ff523c72b670b4baea91de0caeb506412c3b6b4f9a52a2d5f3f7a0d6a886",
+    "transformed": false
+  },
+  {
+    "file": "web/index.html",
+    "original_sha256": "f505492e6aa53c19e4f0565b760e2a555346159665560d660f34c7b6b4eb8f69",
+    "exported_sha256": "f505492e6aa53c19e4f0565b760e2a555346159665560d660f34c7b6b4eb8f69",
+    "transformed": false
+  }
+]

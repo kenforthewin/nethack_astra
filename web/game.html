@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Codex descends · NetHack · archived gameplay view</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #101619; color: #e4e8dc; font-family: system-ui, sans-serif; }
+  main { width: 1920px; height: 1080px; padding: 22px; transform-origin: top left; }
+  header { display: flex; align-items: center; gap: 20px; height: 36px; margin-bottom: 12px; }
+  h1 { margin: 0; font-size: 25px; font-weight: 600; }
+  header span { color: #9cbaab; font-size: 18px; }
+  header .disclosure { margin-left: auto; font-size: 19px; color: #e4e8dc; }
+  pre { margin: 0; height: 714px; padding: 12px; border: 1px solid #35433d; border-radius: 6px;
+    background: #0a1012; color: #e5e5e5; font: 27px/29.5px Menlo, monospace; white-space: pre; }
+  aside { display: grid; grid-template-columns: 1.55fr 1fr; gap: 26px; padding-top: 16px; height: 272px; }
+  section { min-width: 0; overflow: hidden; }
+  h2 { margin: 0 0 10px; color: #a9c58c; font-size: 16px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .decision { font-size: 22px; line-height: 1.34; margin: 0 0 12px; overflow-wrap: anywhere;
+    display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+  .decision + .decision { font-size: 19px; color: #a9b6af; -webkit-line-clamp: 2; }
+  .command { display: flex; align-items: baseline; gap: 14px; font-size: 20px; line-height: 1.65; }
+  .command time { color: #81998d; min-width: 90px; font: 16px Menlo, monospace; }
+  .command code { color: #efd69a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .command small { margin-left: auto; white-space: nowrap; color: #81998d; font-size: 16px; }
+  #audit { font-size: 15px; color: #e4b987; }
+  #audit.good { color: #a9c58c; }
+  #connection { color: #e4b987; font-size: 16px; }
+</style>
+<main>
+  <header><h1>NetHack 3.6.7</h1><span>CodexDelver · Hardfought</span>
+    <span id="audit">Audit: checking</span><span id="connection"></span>
+    <span class="disclosure">AI player · GPT 6 Astra</span></header>
+  <div class="layout"><pre id="terminal">Connecting to the local game view…</pre>
+    <aside><section><h2>Decisions · AI commentary</h2><div id="decisions"></div></section>
+      <section><h2>Commands sent · newest first</h2><div id="commands"></div></section></aside></div>
+</main>
+<script>
+  const main = document.querySelector('main');
+  function resize() { main.style.transform = `scale(${Math.min(innerWidth / 1920, innerHeight / 1080)})`; }
+  addEventListener('resize', resize); resize();
+  let lastTerminal = '';
+  function renderTerminal(state) {
+    const signature = JSON.stringify([state.cols, state.rows, state.runs ?? state.screen]);
+    if (signature === lastTerminal) return;
+    lastTerminal = signature;
+    const terminal = document.querySelector('#terminal');
+    const lineHeight = (terminal.clientHeight - 24) / (state.rows ?? 24);
+    terminal.style.fontSize = `${Math.min(30, lineHeight / 1.1, (terminal.clientWidth - 24) / ((state.cols ?? 80) * 0.61))}px`;
+    terminal.style.lineHeight = `${lineHeight}px`;
+    const fragment = document.createDocumentFragment();
+    for (const run of state.runs ?? [{text: state.screen}]) {
+      const span = document.createElement('span');
+      span.textContent = run.text;
+      if (run.fg) span.style.color = run.fg;
+      if (run.bg) span.style.backgroundColor = run.bg;
+      if (run.bold) span.style.fontWeight = 'bold';
+      if (run.dim) span.style.opacity = '0.6';
+      if (run.italic) span.style.fontStyle = 'italic';
+      if (run.hidden) span.style.visibility = 'hidden';
+      span.style.textDecoration = [run.underline && 'underline', run.strike && 'line-through'].filter(Boolean).join(' ');
+      fragment.append(span);
+    }
+    terminal.replaceChildren(fragment);
+  }
+  let lastFeed = '';
+  function renderActivity(state) {
+    const feed = state.feed ?? [];
+    const signature = JSON.stringify([feed, state.commentary]);
+    if (signature !== lastFeed) {
+      lastFeed = signature;
+      const decisions = feed.filter(x => x.kind === 'decision').slice(-3).reverse();
+      if (!decisions.length) decisions.push({text: state.commentary || 'Waiting for the next decision.'});
+      document.querySelector('#decisions').replaceChildren(...decisions.map(row => {
+        const p = document.createElement('p'); p.className = 'decision'; p.textContent = row.text; return p;
+      }));
+      document.querySelector('#commands').replaceChildren(...feed.filter(x => x.kind === 'command').slice(-6).reverse().map(row => {
+        const div = document.createElement('div'); div.className = 'command';
+        const time = document.createElement('time'); time.textContent = new Date(row.at).toLocaleTimeString([], {hour12: false});
+        const code = document.createElement('code'); code.textContent = (row.label ? row.label + '  ' : '') + (row.named ? `<${row.text}>` : JSON.stringify(row.text));
+        const turn = document.createElement('small'); turn.textContent = row.game_turn == null ? '' : `T:${row.game_turn}`;
+        div.append(time, code, turn); return div;
+      }));
+    }
+    const audit = document.querySelector('#audit');
+    audit.classList.toggle('good', !!state.audit?.healthy);
+    audit.textContent = state.audit?.healthy ? `Audit active · ${(state.audit.head_sha256 || '').slice(0, 12)}` : 'Audit: NOT READY';
+  }
+  async function refresh() {
+    try {
+      const response = await fetch('/state', {cache: 'no-store'});
+      if (!response.ok) throw new Error('Disconnected');
+      const state = await response.json();
+      renderTerminal(state);
+      renderActivity(state);
+      document.querySelector('#connection').textContent = '';
+    } catch {
+      document.querySelector('#connection').textContent = 'Viewer disconnected · last screen retained';
+      document.querySelector('#audit').textContent = 'Audit status unknown';
+    }
+    setTimeout(refresh, 500);
+  }
+  refresh();
+</script>
+</html>

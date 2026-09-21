@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "created_at": "2026-09-21T21:11:40.650043+00:00",
+  "status": "local release candidate; not uploaded; license choice and owner review pending",
+  "checkpoint": {
+    "created_at": "2026-09-21T20:12:18.068261+00:00",
+    "events": 611068,
+    "head_sha256": "80ac25a36421a2eb5038e5a4d85e7ac8564aa23f595c4f4e14dc115bdafd9896",
+    "kinds": {
+      "agent_observation": 29717,
+      "audit_started": 1,
+      "codex_record": 256919,
+      "external_artifact": 198,
+      "guarded_batch": 3100,
+      "guarded_step": 11013,
+      "implementation_checkpoint": 223,
+      "input_preflight_rejected": 16,
+      "input_queued": 44550,
+      "input_requested": 44550,
+      "public_decision": 28104,
+      "raw_input_override": 1272,
+      "run_preparation": 1,
+      "sokoban_attitude_check": 2467,
+      "sokoban_plan": 312,
+      "sokoban_step": 5070,
+      "stash_gold_step": 59,
+      "terminal_output": 141484,
+      "terminal_pipe_started": 1,
+      "terminal_snapshot": 42011
+    },
+    "source_bytes_verified": 812119617,
+    "source_counts": {
+      "custom_tool_call": 39972,
+      "custom_tool_call_output": 39971,
+      "explicitly_omitted": 170386,
+      "function_call": 110,
+      "function_call_output": 110,
+      "message": 6114,
+      "session_meta": 1,
+      "task_complete": 16,
+      "task_started": 22,
+      "turn_aborted": 5,
+      "turn_context": 212
+    },
+    "source_lines_verified": 256919,
+    "source_prefix_sha256": "723144346a6cf4116111e0d8227aeabaf36bff7bc6d9b1c60ea692211a4f6255"
+  },
+  "original_ledger_prefix_sha256": "6e4e74038f24e92de83a42b725018eb8c9aeed40f300034297da797c4a8554ed",
+  "exported_event_count": 611068,
+  "exported_head_sha256": "59e7a70d84c1ba9b5b17ccc34e0d32f3c914f58dc542ca0868083fdfa5d638d5",
+  "event_kinds": {
+    "audit_started": 1,
+    "codex_record": 256919,
+    "terminal_pipe_started": 1,
+    "terminal_snapshot": 42011,
+    "public_decision": 28104,
+    "input_requested": 44550,
+    "input_queued": 44550,
+    "terminal_output": 141484,
+    "agent_observation": 29717,
+    "external_artifact": 198,
+    "implementation_checkpoint": 223,
+    "run_preparation": 1,
+    "guarded_step": 11013,
+    "guarded_batch": 3100,
+    "sokoban_plan": 312,
+    "sokoban_step": 5070,
+    "sokoban_attitude_check": 2467,
+    "input_preflight_rejected": 16,
+    "raw_input_override": 1272,
+    "stash_gold_step": 59
+  },
+  "omission_counts": {
+    "event metadata not on public allowlist": 2,
+    "private reasoning, instructions, duplicate/internal metadata or unselected source record": 170387,
+    "injected workspace instructions/environment; see published journals and harness": 14,
+    "arbitrary tool body withheld; game commands/observations exported separately": 80163,
+    "raw terminal byte chunks withheld; use reviewed snapshots and server ttyrecs": 141484
+  },
+  "model_context_counts": [
+    {
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "contexts": 102
+    },
+    {
+      "model": "gpt-6-astra",
+      "effort": "medium",
+      "contexts": 110
+    }
+  ],
+  "scope": "Whole recorded campaign prefix, including failed runs; not just the winning run.",
+  "limits": [
+    "Filtered projection, not complete raw transcript.",
+    "Arbitrary tool bodies withheld; all original sequence numbers retained as records or omission markers.",
+    "No retroactive terminal capture before recorder activation.",
+    "Original source prefix checked privately; public cannot recheck withheld raw source.",
+    "Hashes are not independent timestamps or proof against owner alteration or out-of-band input.",
+    "Recording segment inventory does not establish uninterrupted coverage.",
+    "No Twitch VOD archive included; no absence-of-human-help claim.",
+    "Automated privacy scanning and selective manual review cannot guarantee absence of all personal data."
+  ]
+}

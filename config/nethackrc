@@ -1,0 +1,46 @@
+# Stream display adapted from Kenny's ~/.nethackrc for Hardfought 3.6.7.
+OPTIONS=windowtype:curses
+OPTIONS=windowborders:2,perm_invent
+OPTIONS=color,menucolors,hilite_pet,hilite_pile
+OPTIONS=showexp,showscore,time,hitpointbar
+OPTIONS=lit_corridor,dark_room,!use_darkgray
+OPTIONS=msg_window:reversed,msghistory:60
+OPTIONS=menu_objsyms,!implicit_uncursed
+OPTIONS=statushilites:10
+
+# Retain the shakedown's gameplay/input defaults.
+OPTIONS=number_pad:1,!autopickup,autodig,fruit:slime mold,boulder:0
+
+OPTIONS=HILITE_STATUS: hunger/Hungry/yellow/Weak/red/Fainting/orange&blink
+OPTIONS=HILITE_STATUS: carrying-capacity/Burdened/brown/Stressed/red/Strained/orange/Overtaxed/bright-red/Overloaded/gray&inverse
+OPTIONS=HILITE_STATUS: condition/stone/red&inverse/termill/red&inverse
+OPTIONS=HILITE_STATUS: condition/strngl/red&inverse
+OPTIONS=HILITE_STATUS: condition/foodpois/red&inverse/slime/red&inverse
+OPTIONS=HILITE_STATUS: condition/blind/yellow/deaf/yellow
+OPTIONS=HILITE_STATUS: condition/stun/yellow
+OPTIONS=HILITE_STATUS: condition/conf/yellow/hallu/bright-magenta
+OPTIONS=HILITE_STATUS: hitpoints/<=100%/bright-green/<=99%/green
+OPTIONS=HILITE_STATUS: hitpoints/<=80%/yellow/<=60%/brown/<=40%/orange/<=20%/bright-red&inverse
+OPTIONS=HILITE_STATUS: power/<=100%/bright-cyan/<=80%/cyan
+OPTIONS=HILITE_STATUS: power/<=60%/bright-blue/<=40%/blue/<=20%/magenta
+OPTIONS=HILITE_STATUS: hitpoints-max/always/green/up/bright-green/down/orange
+OPTIONS=HILITE_STATUS: power-max/always/cyan/up/bright-cyan/down/bright-blue
+
+MENUCOLOR="blessed"=green
+MENUCOLOR=" cursed"=red
+MENUCOLOR="uncursed"=white
+MENUCOLOR="holy"=lightcyan
+MENUCOLOR="unholy"=magenta
+MENUCOLOR="worthless"=brown
+MENUCOLOR="named empty"=brown
+MENUCOLOR="\(weapon in .*\)"=white&underline
+MENUCOLOR="\(alternate weapon\)"=white&underline
+MENUCOLOR="\(being worn\)"=white&underline
+MENUCOLOR="blessed .* \(being worn\)"=lightgreen&underline
+MENUCOLOR=" holding"=lightmagenta
+MENUCOLOR="tricks"=lightmagenta
+MENUCOLOR="cancel"=lightmagenta
+MENUCOLOR="corpse"=brown
+MENUCOLOR="(food |cram |K-|C-)ration|gunyoki"=lightgreen
+MENUCOLOR="lembas wafer|melon|carrot|tins? .* spinach"=lightgreen
+MENUCOLOR=" gold piece"=yellow

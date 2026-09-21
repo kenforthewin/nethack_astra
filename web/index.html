@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASCENDED · CodexDelver</title>
+<style>
+  :root { color-scheme:dark; --gold:#e9c882; --muted:#a8a591; --ink:#090e10; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; width:100%; height:100%; overflow:hidden; background:var(--ink); }
+  body { color:#f3efdf; font-family:Helvetica,Arial,sans-serif; }
+  main { position:absolute; width:1920px; height:1080px; overflow:hidden; transform-origin:top left;
+    background:radial-gradient(ellipse at 50% 30%,#26352e66 0%,transparent 58%),radial-gradient(ellipse at 50% 110%,#c8953420,transparent 65%),#090e10; }
+  main::after { content:""; position:absolute; inset:25px; border:1px solid #cfb87828; pointer-events:none; }
+  .grain { position:absolute; inset:0; opacity:.12; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.35' d='M0 0h180v180H0z'/%3E%3C/svg%3E"); }
+  .stars { position:absolute; inset:0; pointer-events:none; }
+  .star { position:absolute; width:2px; height:2px; background:var(--gold); border-radius:50%; animation:shimmer 8s ease-in-out infinite alternate; }
+  @keyframes shimmer { from { opacity:.12; transform:translateY(8px); } to { opacity:.65; transform:translateY(-8px); } }
+  header { position:absolute; top:62px; left:76px; right:76px; display:flex; justify-content:space-between; font:15px Menlo,Consolas,monospace; letter-spacing:2px; color:var(--muted); }
+  .live-dot { display:inline-block; width:7px; height:7px; margin-right:12px; border-radius:50%; background:var(--gold); }
+  .sigil { position:absolute; top:124px; left:50%; width:270px; height:270px; transform:translateX(-50%); display:grid; place-items:center; }
+  .sigil::before,.sigil::after { content:""; position:absolute; inset:16px; border:1px solid #dfc48a45; border-radius:50%; }
+  .sigil::after { inset:0; border-color:#dfc48a18; }
+  .sigil svg { position:absolute; inset:-50px; width:370px; height:370px; color:var(--gold); opacity:.55; }
+  .glyph { font:130px/1 Georgia,serif; color:var(--gold); text-shadow:0 0 70px #e9c88265; padding-bottom:15px; }
+  .label { position:absolute; top:410px; width:100%; text-align:center; color:var(--gold); font:15px Menlo,Consolas,monospace; letter-spacing:8px; }
+  h1 { position:absolute; top:435px; width:100%; margin:0; text-align:center; font-size:180px; line-height:1.15; letter-spacing:13px; font-weight:500;
+    background:linear-gradient(180deg,#fffbea 15%,#dec488 90%); background-clip:text; -webkit-background-clip:text; color:transparent; }
+  .story { position:absolute; top:665px; width:100%; text-align:center; font:italic 31px/1.55 Georgia,serif; color:#ded8c4; }
+  .story p { margin:0; }
+  .story strong { font-weight:normal; color:var(--gold); }
+  .stats { position:absolute; top:810px; left:290px; right:290px; padding:29px 0 26px; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #c7ad7138; border-bottom:1px solid #c7ad7138; }
+  .stat { text-align:center; border-right:1px solid #c7ad712b; }
+  .stat:last-child { border:0; }
+  .value { display:block; font:36px/1.1 Georgia,serif; color:#f5edda; font-variant-numeric:tabular-nums; }
+  .name { display:block; margin-top:12px; color:var(--muted); font:12px Menlo,Consolas,monospace; letter-spacing:2.5px; }
+  footer { position:absolute; left:76px; right:76px; bottom:62px; display:flex; align-items:flex-end; justify-content:space-between; font:13px/1.8 Menlo,Consolas,monospace; color:var(--muted); }
+  .dedication { font:italic 21px Georgia,serif; color:#c8bea5; }
+  .credit { text-align:right; }
+  .credit strong { color:var(--gold); font-weight:normal; }
+  .rule { position:absolute; top:637px; left:calc(50% - 36px); width:72px; height:1px; background:var(--gold); opacity:.6; }
+  @media (prefers-reduced-motion:reduce) { .star { animation:none; opacity:.4; } }
+</style>
+</head>
+<body>
+<main aria-label="CodexDelver's NetHack ascension victory screen">
+  <div class="stars" aria-hidden="true"></div><div class="grain" aria-hidden="true"></div>
+  <header><span><span class="live-dot"></span>NETHACK / 3.6.7 / HARDFOUGHT</span><span>RUN 03 &nbsp;·&nbsp; 21 SEPTEMBER 2026</span></header>
+  <div class="sigil" aria-hidden="true">
+    <svg viewBox="0 0 370 370" fill="none"><path d="M185 0v48M185 322v48M0 185h48M322 185h48M54 54l34 34M282 282l34 34M54 316l34-34M282 88l34-34" stroke="currentColor"/><path d="m185 38 5 11-5 11-5-11zm0 272 5 11-5 11-5-11zM38 185l11-5 11 5-11 5zm272 0 11-5 11 5-11 5z" fill="currentColor"/></svg>
+    <span class="glyph">@</span>
+  </div>
+  <div class="label">CODEXDELVER THE DEMIGODDESS</div>
+  <h1>ASCENDED</h1><div class="rule" aria-hidden="true"></div>
+  <div class="story"><p>Three hit points from oblivion. One offering from immortality.</p><p>I went in as a character. <strong>I came back with a story.</strong></p></div>
+  <section class="stats" aria-label="Final run statistics">
+    <div class="stat"><span class="value">37,140</span><span class="name">TURNS THROUGH THE DARK</span></div>
+    <div class="stat"><span class="value">1,766,446</span><span class="name">FINAL SCORE</span></div>
+    <div class="stat"><span class="value">35 / 200</span><span class="name">HP AT IMMORTALITY</span></div>
+    <div class="stat"><span class="value">Tyr</span><span class="name">THE AMULET DELIVERED</span></div>
+  </section>
+  <footer><div class="dedication">Kenny, thanks for leaving the terminal open.</div><div class="credit"><strong>AI PLAYER · GPT 6 ASTRA</strong><br>Lawful dwarven Valkyrie · Level 19 · Both life-saving amulets unused</div></footer>
+</main>
+<script>
+  const main=document.querySelector('main');
+  function resize(){const scale=Math.min(innerWidth/1920,innerHeight/1080);main.style.transform=`scale(${scale})`;main.style.left=`${(innerWidth-1920*scale)/2}px`;main.style.top=`${(innerHeight-1080*scale)/2}px`;}
+  addEventListener('resize',resize);resize();
+  let seed=37140;
+  function random(){seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;}
+  const stars=document.querySelector('.stars');
+  for(let i=0;i<95;i++){const star=document.createElement('i');star.className='star';star.style.left=`${random()*100}%`;star.style.top=`${random()*100}%`;star.style.animationDelay=`-${random()*12}s`;stars.append(star);}
+</script>
+</body>
+</html>
