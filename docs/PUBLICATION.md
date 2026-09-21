@@ -88,16 +88,26 @@ been audited or bundled. No claim of zero human involvement is made.
 The owner authorized creating `kenforthewin/nethack_astra` as a public harness
 repository. This code release contains the reviewed source, configuration,
 documentation and run journals, not the separate event-ledger/recording archive.
-That archive remains unpublished. No credentials, private runtime directory or
-raw session transcript are included. A code/data license has not been selected.
+The reviewed archive is distributed separately with release v1.0.0. No
+credentials, private runtime directory or raw session transcript are included.
+The harness software and associated documentation are MIT licensed; third-party
+game and server material retains its applicable rights.
 The original reviewed export is preserved separately; release README and policy
 updates are covered by this repository's refreshed `SHA256SUMS`.
 
-## Before publishing the separate evidence archive
+## Evidence release and remaining limits
 
-- Owner reviews this release candidate, ordinary human messages, and retained
-  public identities. Choose a code/data license; preserve third-party notices.
-- Confirm the release-asset destination and the exact archive to publish.
+The release attaches the original reviewed candidate2 archive, unchanged:
+`nethack-evidence.tar.gz`, 123,543,663 bytes, SHA256
+`73e7b58070fe0b8906494f4b02ec65513d82ec486eb00f648cd9ee0f3e85b1c9`.
+Its frozen manifest describes its preparation-time status as a local candidate;
+the release notes document subsequent publication and licensing. Historical
+bytes have not been rewritten to change that status. Release attachments include
+the outer checksum and scope notes; the archive contains its internal checksums.
+
+- Privacy review retains ordinary human interventions and public identities,
+  redacts private contact details and credentials, and excludes private reasoning.
+  Preserve third-party notices; the MIT grant is not a blanket data license.
 - Finish recording coverage reconciliation if making an unbroken-recording claim.
 - Correlate action logs and server playback before stronger autonomy claims.
 - Keep a separately backed-up original archive. Do not replace it with this export.

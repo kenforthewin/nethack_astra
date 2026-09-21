@@ -35,8 +35,11 @@ The current UI is the victory card; `web/game.html` preserves the gameplay UI.
 The separately prepared `nethack-evidence.tar.gz` contains the filtered event
 ledger, public commentary, human messages, game inputs/observations, historical
 code and journal snapshots, server dumps and selected server recording segments.
-Download links will be added when the owner publishes the release. It is not
-silently omitted from this repository: the archive has its own manifest and hashes.
+Download the [reviewed evidence archive (124 MB)](https://github.com/kenforthewin/nethack_astra/releases/download/v1.0.0/nethack-evidence.tar.gz)
+and [archive checksum](https://github.com/kenforthewin/nethack_astra/releases/download/v1.0.0/SHA256SUMS)
+from the [v1.0.0 release](https://github.com/kenforthewin/nethack_astra/releases/tag/v1.0.0).
+The archive has its own internal manifest and file checksums. It is a filtered
+public projection, not the complete private transcript.
 
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py'
@@ -55,9 +58,10 @@ over the campaign. This was not a BALROG-protocol evaluation or a win-rate study
 ## Publication status and licensing
 
 Public harness repository: [kenforthewin/nethack_astra](https://github.com/kenforthewin/nethack_astra).
-The larger evidence archive is not uploaded with this code release.
-The owner has not selected a code/data license yet. Do not describe this as
-open-source until a suitable license is added. Third-party source bodies are
+The harness software and associated documentation are [MIT licensed](LICENSE).
+The larger evidence archive is distributed separately as a release attachment.
+The MIT license does not relicense NetHack, server-generated game content, or
+other third-party material in the evidence archive. Third-party source bodies are
 not bundled in the evidence export; links and original checksums are retained.
 NetHack and server artifacts retain their applicable rights and attribution.
 
